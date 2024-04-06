@@ -27,8 +27,14 @@ def process_directory(directory_path):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script.py <directory_path>")
+        print("Usage: python script.py <path_to_directory_or_zip>")
         sys.exit(1)
     
-    directory_path = sys.argv[1]
-    process_directory(directory_path)
+    path = sys.argv[1]
+    if os.path.isdir(path):
+        process_directory(path)
+    elif os.path.isfile(path) and path.endswith('.zip'):
+        print(f"Processing {path}")
+        filter_and_repack_zip(path)
+    else:
+        print("The path is not a directory or a ZIP file.")
