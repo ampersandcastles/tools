@@ -1,0 +1,17 @@
+#!/bin/bash
+
+awk 'BEGIN{CONVFMT="%.2f"} 
+{
+    if ($1 ~ /^[0-9]+$/) {
+        byte=$1; 
+        if (byte >= 1073741824) 
+            {printf("%.2f GB\t%s\n", byte/1073741824, $4)}
+        else if (byte >= 1048576) 
+            {printf("%.2f MB\t%s\n", byte/1048576, $4)}
+        else if (byte >= 1024) 
+            {printf("%.2f KB\t%s\n", byte/1024, $4)}
+        else 
+            {print $1 " B\t" $4}
+    } 
+    else {print $0}
+}'
