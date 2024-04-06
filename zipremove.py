@@ -3,6 +3,7 @@ import os
 import sys
 import tempfile
 from pathlib import Path
+import shutil
 
 def filter_and_repack_zip(zip_path):
     temp_dir = tempfile.TemporaryDirectory()
@@ -13,8 +14,10 @@ def filter_and_repack_zip(zip_path):
             for file in original_zip.namelist():
                 if "(USA" in file or "(USA, Europe)" in file:
                     new_zip.writestr(file, original_zip.read(file))
-    
-    os.replace(new_zip_path, zip_path)
+
+    # Remove the original file and move the new file to the original location
+    os.remove(zip_path)
+    shutil.move(new_zip_path, zip_path)
 
 def process_directory(directory_path):
     for zip_file in Path(directory_path).glob('*.zip'):
