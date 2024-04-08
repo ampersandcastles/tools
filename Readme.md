@@ -12,7 +12,7 @@ This utility helps in extracting the contents of zip files. It's particularly ha
 A convenient tool for removing specified files from zip archives. This can be useful for cleaning up archives without the need to decompress and recompress them.
 
 ### 4. `zipsize`
-It seems like this might be a script or a directory related to managing or retrieving zip file sizes, but without an extension, its exact purpose is a bit unclear. If it's a script, it likely serves a function similar to `sizegetter.py` but specifically for zip files.
+This is a small bash script that should be piped through ```unzip -l file.zip``` I wanted a way to see a different size of files in the archive.
 
 ## Installation
 No installation is necessary for these scripts. They are standalone Python scripts that can be run from the command line. Ensure you have Python installed on your system, navigate to the directory containing these scripts, and execute them with Python. For example:
