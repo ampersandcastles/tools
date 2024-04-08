@@ -14,6 +14,8 @@ def filter_and_repack_zip(zip_path):
             for file in original_zip.namelist():
                 if "(USA" in file or "(USA, Europe)" in file:
                     new_zip.writestr(file, original_zip.read(file))
+                else:
+                    print(f"Removing {file} from {zip_path}")
 
     # Remove the original file and move the new file to the original location
     os.remove(zip_path)
