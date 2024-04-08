@@ -10,7 +10,9 @@ def unzip_files(directory_path):
         os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exist
 
         with zipfile.ZipFile(zip_file, 'r') as zip_ref:
-            zip_ref.extractall(output_dir)
+            for file in zip_ref.namelist():
+                print(f"Extracing {file} to {output_dir}")
+                zip_ref.extract(file, output_dir)
             print(f"Extracted {zip_file.name} to {output_dir}")
 
 if __name__ == "__main__":
