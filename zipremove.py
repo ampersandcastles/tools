@@ -12,7 +12,7 @@ def filter_and_repack_zip(zip_path):
     with zipfile.ZipFile(zip_path, 'r') as original_zip:
         with zipfile.ZipFile(new_zip_path, 'w') as new_zip:
             for file in original_zip.namelist():
-                if "(USA" in file or "(USA, Europe)" in file:
+                if "(USA" in file or "(USA, Europe)" in file or "(Proto" in file or "[BIOS" in file:
                     new_zip.writestr(file, original_zip.read(file))
                 else:
                     print(f"Removing {file} from {zip_path}")
