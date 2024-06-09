@@ -15,7 +15,7 @@ A convenient tool for removing specified files from zip archives. This can be us
 This is a small bash script that should be piped through ```unzip -l file.zip``` I wanted a way to see a different size of files in the archive.
 
 
-### packet.py
+### 5. `packet.py`
 A small packet I use for testing. ```scapy``` needed.
 
 ## Installation
