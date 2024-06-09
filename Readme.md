@@ -14,6 +14,10 @@ A convenient tool for removing specified files from zip archives. This can be us
 ### 4. `zipsize`
 This is a small bash script that should be piped through ```unzip -l file.zip``` I wanted a way to see a different size of files in the archive.
 
+
+### packet.py
+A small packet I use for testing. ```scapy``` needed.
+
 ## Installation
 No installation is necessary for these scripts. They are standalone Python scripts that can be run from the command line. Ensure you have Python installed on your system, navigate to the directory containing these scripts, and execute them with Python. For example:
 
@@ -22,5 +26,3 @@ No installation is necessary for these scripts. They are standalone Python scrip
 ## Usage
 Each script can be executed from the command line, with potential arguments depending on the script's design. Refer to each script's source code for detailed usage instructions.
 
-## Contributing
-Contributions to this collection are welcome. Whether it's adding new tools, improving existing ones, or suggesting enhancements, feel free to fork the repository and submit a pull request.
