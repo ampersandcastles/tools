@@ -18,6 +18,9 @@ This is a small bash script that should be piped through ```unzip -l file.zip```
 ### 5. `packet.py`
 A small packet I use for testing. ```scapy``` needed.
 
+### 6. `cpp-project-gen.py`
+A small script to generate a c++ project structure.
+
 ## Installation
 No installation is necessary for these scripts. They are standalone Python scripts that can be run from the command line. Ensure you have Python installed on your system, navigate to the directory containing these scripts, and execute them with Python. For example:
 
