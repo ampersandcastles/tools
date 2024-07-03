@@ -21,6 +21,9 @@ A small packet I use for testing. ```scapy``` needed.
 ### 6. `cpp-project-gen.py`
 A small script to generate a c++ project structure.
 
+### 7. `lsblk.py`
+This is not a direct clone of lsblk.c, this is a minimal reinterpretation for use on FreeBSD. It works in the sense that it functions. Maybe it'll get added to.
+
 ## Installation
 No installation is necessary for these scripts. They are standalone Python scripts that can be run from the command line. Ensure you have Python installed on your system, navigate to the directory containing these scripts, and execute them with Python. For example:
 
